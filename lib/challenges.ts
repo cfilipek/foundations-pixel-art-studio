@@ -4,7 +4,7 @@ export const challenges: Challenge[] = [
   {
     id: 1,
     title: "Create an Emoji",
-    description: "Design a fun emoji face. Try a smiley, heart eyes, or surprise face!",
+    description: "Design a fun emoji face.",
     difficulty: "easy",
     gridSize: 16,
     icon: "😊",
@@ -12,7 +12,7 @@ export const challenges: Challenge[] = [
   {
     id: 2,
     title: "Game Object",
-    description: "Create an iconic object from your favorite video game. Think mushrooms, coins, or power-ups!",
+    description: "Create an iconic object from your favorite video game.",
     difficulty: "medium",
     gridSize: 16,
     icon: "🎮",
@@ -20,7 +20,7 @@ export const challenges: Challenge[] = [
   {
     id: 3,
     title: "Platform Game Background",
-    description: "Design a background scene for a platform game. Include clouds, mountains, or buildings with depth!",
+    description: "Design a background scene for a platform game.",
     difficulty: "hard",
     gridSize: 32,
     icon: "🏞️",
@@ -36,7 +36,7 @@ export const challenges: Challenge[] = [
   {
     id: 5,
     title: "Food Item",
-    description: "Design a delicious food item in pixel art. Pizza, ice cream, or sushi work great!",
+    description: "Design a delicious food item in pixel art.",
     difficulty: "easy",
     gridSize: 16,
     icon: "🍕",
