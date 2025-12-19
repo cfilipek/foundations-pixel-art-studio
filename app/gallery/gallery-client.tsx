@@ -15,12 +15,13 @@ interface GalleryClientProps {
   artworks: PixelArtwork[]
 }
 
-export function GalleryClient({ artworks }: GalleryClientProps) {
+export function GalleryClient({ artworks: initialArtworks }: GalleryClientProps) {
   const [isAuthenticated, setIsAuthenticated] = useState(false)
   const [selectedArtwork, setSelectedArtwork] = useState<PixelArtwork | null>(null)
   const [showcaseOpen, setShowcaseOpen] = useState(false)
   const [isDeleteMode, setIsDeleteMode] = useState(false)
   const [deletingId, setDeletingId] = useState<string | null>(null)
+  const [artworks, setArtworks] = useState(initialArtworks)
   const router = useRouter()
   const { toast } = useToast()
 
@@ -50,6 +51,7 @@ export function GalleryClient({ artworks }: GalleryClientProps) {
       const data = await response.json()
 
       if (data.success) {
+        setArtworks((prev) => prev.filter((artwork) => artwork.id !== artworkId))
         toast({
           title: "Artwork deleted",
           description: "The artwork has been removed from the gallery.",
