@@ -1,6 +1,9 @@
 [build]
   command = "npm run build"
   publish = ".next"
+  
+[build.environment]
+  SECRETS_SCAN_OMIT_KEYS = "NEXT_PUBLIC_SUPABASE_ANON_KEY,NEXT_PUBLIC_SUPABASE_URL,SUPABASE_ANON_KEY,SUPABASE_URL"
 
 [[plugins]]
   package = "@netlify/plugin-nextjs"
@@ -15,6 +18,3 @@
   for = "/api/*"
   [headers.values]
     Cache-Control = "no-cache, no-store, must-revalidate"
-
-[build.environment]
-  SECRETS_SCAN_OMIT_KEYS = "NEXT_PUBLIC_SUPABASE_ANON_KEY,NEXT_PUBLIC_SUPABASE_URL"
