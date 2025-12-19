@@ -43,10 +43,10 @@ export const challenges: Challenge[] = [
   },
   {
     id: 6,
-    title: "Fantasy Weapon",
-    description: "Create a cool weapon for an RPG game. Swords, staffs, or magical items!",
+    title: "Magic Item",
+    description: "Create a cool magic item for an RPG game.",
     difficulty: "medium",
     gridSize: 20,
-    icon: "⚔️",
+    icon: "🪄",
   },
 ]
